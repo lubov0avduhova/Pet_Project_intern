@@ -20,7 +20,7 @@ public class GenericsUtilsTest {
     }
 
     @Test
-    public void getFirstElement_shouldReturnObject_whenListHasOneElement(){
+    public void getFirstElement_shouldReturnString_whenListHasOneElement(){
         String firstElement = "firstElement";
         List<String> list = new ArrayList<>();
         list.add(firstElement);
@@ -29,11 +29,24 @@ public class GenericsUtilsTest {
     }
 
     @Test
-    public void getFirstElement_shouldReturnObject_whenListHasMoreThanOneElement(){
+    public void getFirstElement_shouldReturnString_whenListHasMoreThanOneElement(){
         String firstElement = "firstElement";
         String secondElement = "secondElement";
         String thirdElement = "thirdElement";
         List<String> list = new ArrayList<>();
+        list.add(firstElement);
+        list.add(secondElement);
+        list.add(thirdElement);
+
+        Assertions.assertEquals(firstElement, GenericsUtils.getFirstElement(list));
+    }
+
+    @Test
+    public void getFirstElement_shouldReturnInteger_whenListHasMoreThanOneElement(){
+        int firstElement = 1;
+        int secondElement = 2;
+        int thirdElement = 3;
+        List<Integer> list = new ArrayList<>();
         list.add(firstElement);
         list.add(secondElement);
         list.add(thirdElement);
