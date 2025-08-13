@@ -29,4 +29,12 @@ public class EvenNumberUtilsTest {
         int result = utils.sumNumbers(array);
         Assertions.assertEquals(12, result);
     }
+
+    @Test
+    public void negativeEvenArrayTest(){
+        int[] array = new int[]{-2, -4, -6};
+
+        int result = utils.sumNumbers(array);
+        Assertions.assertEquals(-12, result);
+    }
 }
