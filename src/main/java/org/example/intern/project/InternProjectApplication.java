@@ -1,4 +1,4 @@
-package org.example.intern_project;
+package org.example.intern.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package org.example.intern_project;
+package org.example.intern.project;
 
 public class EvenNumberUtils {
     public EvenNumberUtils() {
