@@ -1,6 +1,5 @@
-package org.example.intern.project;
+package org.example.intern.project.algo;
 
-import org.example.intern.project.algo.TwoSumUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
