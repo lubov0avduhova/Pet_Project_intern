@@ -5,7 +5,7 @@ public final class TwoSumUtils {
         throw new UnsupportedOperationException("Don't instantiate utility class");
     }
 
-    public static int[] getTwoSumSorted(int[] nums, int target) {
+    public static int[] findTwoSumSorted(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
 

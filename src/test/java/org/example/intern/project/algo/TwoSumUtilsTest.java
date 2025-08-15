@@ -10,7 +10,7 @@ public class TwoSumUtilsTest {
         int[] nums = new int[]{1, 2, 4, 8, 10};
         int target = 3;
 
-        Assertions.assertArrayEquals(new int[]{0, 1}, TwoSumUtils.getTwoSumSorted(nums, target));
+        Assertions.assertArrayEquals(new int[]{0, 1}, TwoSumUtils.findTwoSumSorted(nums, target));
     }
 
 
@@ -20,7 +20,7 @@ public class TwoSumUtilsTest {
         int[] nums = new int[]{1, 3, 5, 7, 9};
         int target = 12;
 
-        Assertions.assertArrayEquals(new int[]{1, 4}, TwoSumUtils.getTwoSumSorted(nums, target));
+        Assertions.assertArrayEquals(new int[]{1, 4}, TwoSumUtils.findTwoSumSorted(nums, target));
     }
 
     //Пара в конце
@@ -29,6 +29,16 @@ public class TwoSumUtilsTest {
         int target = 18;
         int[] nums = new int[]{2, 4, 6, 8, 10};
 
-        Assertions.assertArrayEquals(new int[]{3, 4}, TwoSumUtils.getTwoSumSorted(nums, target));
+        Assertions.assertArrayEquals(new int[]{3, 4}, TwoSumUtils.findTwoSumSorted(nums, target));
+    }
+
+    //Пара не найдена
+    @Test
+    public void inputArrayIsSorted_shouldReturnPair_whenPairINotFound() {
+        int target = 1;
+        int[] nums = new int[]{2, 4};
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> TwoSumUtils.findTwoSumSorted(nums, target));
+
     }
 }
