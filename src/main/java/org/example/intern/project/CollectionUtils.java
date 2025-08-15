@@ -3,6 +3,7 @@ package org.example.intern.project;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -13,7 +14,11 @@ public final class CollectionUtils {
     }
 
     public static List<String> toListPreserveOrder(String... items) {
-        return List.of(items); //или тут лучше добавить обычную коллекцию?
+        List<String> list = new LinkedList<>();
+        for (String item : items) {
+            list.add(item);
+        }
+        return list;
     }
 
     public static Set<String> toUniqueSet(Collection<String> items) {
