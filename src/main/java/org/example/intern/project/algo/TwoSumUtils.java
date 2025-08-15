@@ -5,16 +5,20 @@ public final class TwoSumUtils {
         throw new UnsupportedOperationException("Don't instantiate utility class");
     }
 
-    public static int[] inputArrayIsSorted(int[] nums, int target) {
-        for (int left = 0, right = nums.length - 1; left < right; ) {
-            if (nums[left] + nums[right] == target) {
+    public static int[] getTwoSumSorted(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            if (sum == target) {
                 return new int[]{left, right};
-            } else if (nums[left] + nums[right] > target) {
+            } else if (sum > target) {
                 right--;
             } else {
                 left++;
             }
         }
-        return new int[]{};
+        throw new IllegalArgumentException("Пара не найдена");
     }
 }
